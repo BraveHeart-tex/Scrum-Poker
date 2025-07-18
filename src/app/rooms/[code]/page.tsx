@@ -25,7 +25,7 @@ const RoomPage = async ({ params }: RoomPageProps) => {
   const { isAuthenticated } = await auth();
 
   if (!isAuthenticated) {
-    redirect(ROUTES.AUTH);
+    redirect(ROUTES.SIGN_IN);
   }
 
   if (!isValidRoomCode((await params).code)) {

@@ -135,7 +135,8 @@ export const getRoomWithDetailsByCode = query({
     roomCode: v.string(),
   },
   handler: async (ctx, args) => {
-    const currentUserId = await getAuthUserId(ctx);
+    const userIdentity = await ctx.auth.getUserIdentity();
+    const currentUserId = userIdentity?.userId as string | undefined;
     if (!currentUserId) {
       throw new ApplicationError({
         code: ERROR_CODES.UNAUTHORIZED,

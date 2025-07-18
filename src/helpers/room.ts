@@ -7,7 +7,7 @@ import { ROUTES } from '@/src/lib/routes';
 
 export const handleJoinRoomError = (error: unknown) => {
   return handleApplicationError(error, {
-    [ERROR_CODES.UNAUTHORIZED]: () => redirect(ROUTES.AUTH),
+    [ERROR_CODES.UNAUTHORIZED]: () => redirect(ROUTES.SIGN_IN),
     [ERROR_CODES.NOT_FOUND]: () => {
       showErrorToast('Room not found');
       redirect(ROUTES.HOME);

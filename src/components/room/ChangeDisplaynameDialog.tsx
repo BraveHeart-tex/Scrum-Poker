@@ -79,7 +79,7 @@ const ChangeDisplaynameDialog = ({
       handleApplicationError(error, {
         [ERROR_CODES.UNAUTHORIZED]: () => {
           showErrorToast('You are not authorized to perform this action.');
-          redirect(ROUTES.AUTH);
+          redirect(ROUTES.SIGN_IN);
         },
         [ERROR_CODES.NOT_FOUND]: () => {
           redirect(ROUTES.HOME);

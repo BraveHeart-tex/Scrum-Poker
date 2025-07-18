@@ -1,5 +1,5 @@
 export const ROUTES = {
   HOME: '/',
   ROOM: (roomCode: string) => `/rooms/${roomCode}`,
-  AUTH: '/auth',
+  SIGN_IN: '/sign-in',
 };

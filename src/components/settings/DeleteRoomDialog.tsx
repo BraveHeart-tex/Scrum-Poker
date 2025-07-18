@@ -52,7 +52,7 @@ const DeleteRoomDialog = ({ isOpen, onOpenChange }: CommonDialogProps) => {
       handleApplicationError(error, {
         [ERROR_CODES.UNAUTHORIZED]: () => {
           showErrorToast('You are not authorized to perform this action.');
-          router.push(ROUTES.AUTH);
+          router.push(ROUTES.SIGN_IN);
         },
         [ERROR_CODES.NOT_FOUND]: () => {
           showErrorToast('Room not found');

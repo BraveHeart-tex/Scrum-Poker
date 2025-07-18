@@ -56,7 +56,7 @@ const TransferOwnershipDialog = ({
     } catch (error) {
       handleApplicationError(error, {
         [ERROR_CODES.UNAUTHORIZED]: () => {
-          router.push(ROUTES.AUTH);
+          router.push(ROUTES.SIGN_IN);
         },
         [ERROR_CODES.NOT_FOUND]: () => {
           showErrorToast('Room not found');

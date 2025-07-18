@@ -58,7 +58,7 @@ const JoinRoomDialog = () => {
     } catch (error) {
       return handleApplicationError(error, {
         [ERROR_CODES.UNAUTHORIZED]: () => {
-          router.push(ROUTES.AUTH);
+          router.push(ROUTES.SIGN_IN);
         },
         [ERROR_CODES.VALIDATION_ERROR]: () => {
           showErrorToast(
